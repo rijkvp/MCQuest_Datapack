@@ -1,0 +1,29 @@
+{
+    "parent": "mcquest:quests/root",
+    "display": {
+        "icon": {
+            "item": "minecraft:book"
+        },
+        "title": "Een boek!",
+        "description": "Maak een boek",
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "item": "minecraft:book"
+                }]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "book"
+        ]
+    ]
+}

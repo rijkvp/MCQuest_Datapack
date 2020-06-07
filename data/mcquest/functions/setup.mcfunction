@@ -1,5 +1,6 @@
 gamerule commandBlockOutput false
-gamerule reducedDebugInfo true
+gamerule mobGriefing false
+gamerule sendCommandFeedback false
 difficulty easy
 team add blauw "Blauw"
 team add rood "Rood"
