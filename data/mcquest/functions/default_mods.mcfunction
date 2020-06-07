@@ -2,7 +2,7 @@
 team leave @a
 team join mod richelbilderbeek
 team join mod _DaanDeBanaan_
-# team join mod Rycoder
+team join mod Rycoder
 op @a[team=mod]
 deop @a[team=!mod]
 gamemode creative @a[team=mod]
