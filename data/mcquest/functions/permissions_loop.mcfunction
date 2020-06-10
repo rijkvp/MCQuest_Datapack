@@ -11,3 +11,11 @@ title @a[team=] actionbar ["",{"text":"Je bent nog niet aan een team toegevoegd!
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
 bossbar set minecraft:2 players @a
+
+# Add timer
+scoreboard players add @e[tag=timer_tag,limit=1] timer 1
+# Display timer
+execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=timer_tag,limit=1] timer
+
+# Game over!
+execute at @e[scores={timer=7200..}] run function mcquest:end

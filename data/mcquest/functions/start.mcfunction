@@ -11,7 +11,21 @@ gamerule doImmediateRespawn false
 defaultgamemode survival
 gamemode survival @a[team=!mod] 
 
-execute as @a run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1.0 1.0 1.0
+# Remove old timer
+bossbar set minecraft:1 value 0
+scoreboard objectives remove timer
+kill @e[type=minecraft:armor_stand]
+tag @e remove timer_tag
+
+# Setup Timer
+summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
+bossbar set minecraft:1 name "MCQ - Game (1 uur)"
+tag @e[type=minecraft:armor_stand, limit=1] add timer_tag
+scoreboard objectives add timer dummy "game-timer"
+scoreboard players set @e[tag=timer_tag,limit=1] timer 0
+bossbar set minecraft:1 max 7200
+
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 tellraw @a ["",{"text":"De Minecraft Quest is begonnen! Veel succes!","color":"yellow"}]
+schedule function mcquest:playsound 4t

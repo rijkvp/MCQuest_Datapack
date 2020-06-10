@@ -20,10 +20,9 @@ team modify blauw collisionRule pushOtherTeams
 team modify mod collisionRule pushOtherTeams
 defaultgamemode adventure
 gamemode adventure @a
-scoreboard objectives add state dummy "State"
-# scoreboard players set @a state 1
+
 bossbar add 0 "MCQ - Pre-Game"
-bossbar add 1 "MCQ - Game tot 17:00"
+bossbar add 1 "MCQ - Game (test 1 minuut)"
 bossbar add 2 "MCQ - Post-Game"
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
