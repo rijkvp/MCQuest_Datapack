@@ -13,6 +13,7 @@ gamemode survival @a[team=!mod]
 
 # Remove old timer
 bossbar set minecraft:1 value 0
+bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove timer_tag
@@ -31,4 +32,7 @@ time set 0
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 tellraw @a ["",{"text":"De Minecraft Quest is begonnen! Veel succes!","color":"yellow"}]
-schedule function mcquest:playsound 4t
+schedule function mcquest:playsound 1t
+
+# Play some music
+function mcquest:nice_music

@@ -2,6 +2,9 @@ op @a[team=mod]
 deop @a[team=!mod]
 # Set gm to survival if you're not an mod and in another team
 gamemode survival @a[team=!mod, team=!, gamemode=!adventure]
+# Only if the game has been started and not ended yet
+execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod]
+
 # Set gm to adventure if you're not in a team
 gamemode adventure @a[team=]
 # Send message if you're not in a team yet 
