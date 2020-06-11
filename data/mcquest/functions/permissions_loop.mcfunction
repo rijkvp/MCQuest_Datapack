@@ -26,5 +26,5 @@ execute at @e[scores={timer=72000..}] run function mcquest:end
 #Drop GUI
 execute as @a[scores={drop=1..}] run function mcquest:get_slot
 
- replaceitem entity @e[team=] hotbar.3 minecraft:red_wool{test:1,display:{Name:'"Rood","color":"red"}'},}
- replaceitem entity @e[team=] hotbar.5 minecraft:blue_wool{test:1,display:{Name:'"Blauw","color":"red"}'},}
+replaceitem entity @e[team=] hotbar.3 minecraft:red_wool{test:1,display:{Name:'"Rood","color":"red"}'},}
+replaceitem entity @e[team=] hotbar.5 minecraft:blue_wool{test:1,display:{Name:'"Blauw","color":"red"}'},}
