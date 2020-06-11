@@ -18,6 +18,7 @@ team modify mod friendlyFire false
 team modify rood collisionRule pushOtherTeams
 team modify blauw collisionRule pushOtherTeams
 team modify mod collisionRule pushOtherTeams
+
 defaultgamemode adventure
 gamemode adventure @a
 
