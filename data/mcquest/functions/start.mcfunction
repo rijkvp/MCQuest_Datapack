@@ -20,7 +20,6 @@ tag @e remove timer_tag
 
 # Setup Timer
 summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
-bossbar set minecraft:1 name "MCQ - Game (1 uur)"
 tag @e[type=minecraft:armor_stand, limit=1] add timer_tag
 scoreboard objectives add timer dummy "game-timer"
 scoreboard players set @e[tag=timer_tag,limit=1] timer 0
