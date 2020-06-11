@@ -25,6 +25,9 @@ scoreboard objectives add timer dummy "game-timer"
 scoreboard players set @e[tag=timer_tag,limit=1] timer 0
 bossbar set minecraft:1 max 72000
 
+# Reset time
+time set 0
+
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 tellraw @a ["",{"text":"De Minecraft Quest is begonnen! Veel succes!","color":"yellow"}]
