@@ -1,7 +1,9 @@
+#set bossbar visibility
 bossbar set minecraft:0 visible false
 bossbar set minecraft:1 visible true
 bossbar set minecraft:2 visible false
 
+#setup for start
 gamerule showDeathMessages false
 gamerule doImmediateRespawn true
 clear @a

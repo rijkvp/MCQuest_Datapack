@@ -1,3 +1,4 @@
+#Bossbars set visibility
 bossbar set minecraft:0 visible false
 bossbar set minecraft:1 visible false
 bossbar set minecraft:2 visible true
@@ -12,6 +13,7 @@ tag @e remove timer_tag
 
 defaultgamemode spectator
 
+#music and message's
 execute as @a run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1.0 1.0 1.0
 title @a subtitle {"text":"Is afgelopen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]

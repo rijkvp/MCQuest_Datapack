@@ -24,7 +24,10 @@ execute store result bossbar minecraft:1 value run scoreboard players get @e[tag
 execute at @e[scores={timer=72000..}] run function mcquest:end
 
 #Drop GUI
+
+#See if a player has 1 or more drops then run a function named mcquest:get_slot
 execute as @a[scores={drop=1..}] run function mcquest:get_slot
 
+#Set the blocks in youre inventory
 replaceitem entity @e[team=] hotbar.3 minecraft:red_wool{mcquest:1,display:{Name:'"Rood","color":"red"}'},}
 replaceitem entity @e[team=] hotbar.5 minecraft:blue_wool{mcquest:1,display:{Name:'"Blauw","color":"red"}'},}
