@@ -25,7 +25,7 @@ summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
 tag @e[type=minecraft:armor_stand, limit=1] add timer_tag
 scoreboard objectives add timer dummy "game-timer"
 scoreboard players set @e[tag=timer_tag,limit=1] timer 0
-bossbar set minecraft:1 max 72000
+bossbar set minecraft:1 max 84000
 
 # Reset time
 time set 0
