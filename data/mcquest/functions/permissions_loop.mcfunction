@@ -20,7 +20,7 @@ scoreboard players add @e[tag=timer_tag,limit=1] timer 1
 execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=timer_tag,limit=1] timer
 
 # Game over!
-execute at @e[scores={timer=72000..}] run function mcquest:end
+execute at @e[scores={timer=84000..}] run function mcquest:end
 
 #Drop GUI
 
