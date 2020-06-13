@@ -11,11 +11,14 @@ difficulty easy
 #setup the teams
 team add blauw "Blauw"
 team add rood "Rood"
+team add spec "Spectator"
 team add mod "Moderator"
 team modify blauw color blue
 team modify rood color red
 team modify mod color green
+team modify spec color gray
 team modify blauw prefix "[B] "
+team modify spec prefix "[S] "
 team modify rood prefix "[R] "
 team modify mod prefix "[MOD] "
 team modify blauw friendlyFire false
