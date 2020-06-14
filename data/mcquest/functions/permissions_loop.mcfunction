@@ -24,6 +24,7 @@ execute store result bossbar minecraft:1 value run scoreboard players get @e[tag
 
 # Some timer checks
 execute at @e[scores={timer=42000..}] run tellraw @a "We zijn op de helft!"
+execute at @e[scores={timer=40200..}] run tellraw @a "Nog een half uur!"
 execute at @e[scores={timer=83700..}] run tellraw @a "Nog 5 minuten!"
 execute at @e[scores={timer=83995..}] run tellraw @a "Nog 5 seconden!"
 execute at @e[scores={timer=83996..}] run tellraw @a "Nog 4 seconden!"
