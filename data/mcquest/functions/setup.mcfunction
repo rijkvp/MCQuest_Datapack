@@ -53,11 +53,10 @@ bossbar set minecraft:2 value 1
 bossbar set minecraft:0 visible true
 bossbar set minecraft:1 visible false
 bossbar set minecraft:2 visible false
-#message that it has been succesfuly runt
+# Message that it has been successfully executed
 tellraw @a ["",{"text":"MCQuest is opgezet!","bold":true,"color":"gold"}]
 title @a subtitle {"text":"Begint binnen 5 minuten!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 tellraw @a ["",{"text":"De MCQuest begint binnen 5 minuten!","color":"yellow"}]
 execute as @a run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1.0 1.0 1.0
 function mcquest:default_mods
-function mcquest:default_teams
