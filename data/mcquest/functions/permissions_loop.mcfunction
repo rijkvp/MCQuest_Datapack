@@ -23,9 +23,15 @@ scoreboard players add @e[tag=timer_tag,limit=1] timer 1
 execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=timer_tag,limit=1] timer
 
 # Some timer checks
-execute at @e[scores={timer=84000..}] run function mcquest:end
-execute at @e[scores={timer=42000..}] run tellraw @a "Nog 30 minuten!"
+execute at @e[scores={timer=42000..}] run tellraw @a "We zijn op de helft!"
 execute at @e[scores={timer=83700..}] run tellraw @a "Nog 5 minuten!"
+execute at @e[scores={timer=83995..}] run tellraw @a "Nog 5 seconden!"
+execute at @e[scores={timer=83996..}] run tellraw @a "Nog 4 seconden!"
+execute at @e[scores={timer=83997..}] run tellraw @a "Nog 3 seconden!"
+execute at @e[scores={timer=83998..}] run tellraw @a "Nog 2 seconden!"
+execute at @e[scores={timer=83999..}] run tellraw @a "Nog 1 seconde!"
+execute at @e[scores={timer=84000..}] run function mcquest:end
+
 #Drop GUI
 
 #See if a player has 1 or more drops then run a function named mcquest:get_slot
