@@ -8,6 +8,10 @@ execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode 
 gamemode adventure @a[team=]
 
 gamemode spectator @a[team=spec]
+# Give night vision and invis to moderators
+effect give @a[team=mod] minecraft:night_vision 1000000 255 true
+effect give @a[team=mod] minecraft:invisibility 1000000 255 true
+
 
 # Send message if you're not in a team yet 
 title @a[team=] actionbar ["",{"text":"Je bent nog niet aan een team toegevoegd!","bold":true,"underlined":true,"color":"dark_red"}]
