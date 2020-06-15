@@ -11,7 +11,7 @@ scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove timer_tag
 # Set gamemode to spectator for everyone
-team join spec @a
+team join spec @a[team=!mod]
 defaultgamemode spectator
 
 #music and message's
