@@ -16,9 +16,10 @@ effect give @a[team=mod] minecraft:invisibility 1000000 255 true
 # Send message if you're not in a team yet 
 title @a[team=] actionbar ["",{"text":"Kies een team met de blokken in je inventory!","bold":true,"underlined":true,"color":"dark_red"}]
 # Give you regeneration and night vision if you are not in a team yet
-effect give @a[gamemode=adventure] minecraft:regeneration 2 255 true
-effect give @a[gamemode=adventure] minecraft:resistance 2 255 true
-effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
+effect give @a[gamemode=adventure] minecraft:regeneration 1 255 true
+effect give @a[gamemode=adventure] minecraft:resistance 1 255 true
+effect give @a[gamemode=adventure] minecraft:weakness 1 255 true
+effect give @a[gamemode=adventure] minecraft:saturation 1 255 true
 # Bars
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
