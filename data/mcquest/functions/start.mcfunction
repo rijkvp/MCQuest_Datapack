@@ -33,7 +33,7 @@ bossbar set minecraft:1 max 84000
 
 # Reset time & weather
 time set 0
-weather clear weather clear 12000
+weather clear 12000
 
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
