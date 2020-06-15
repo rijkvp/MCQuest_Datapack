@@ -46,10 +46,10 @@ execute at @e[scores={timer=84000}] run function mcquest:end
 execute as @a[scores={drop=1..}] run function mcquest:get_slot
 kill @e[nbt={Item:{tag:{mcquest:1b}}}]
 
-#Set the blocks in youre inventory
-replaceitem entity @e[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:'"Rood","color":"red"}'},}
-replaceitem entity @e[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:'"Blauw","color":"red"}'},}
-replaceitem entity @e[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:'"Spectator","color":"red"}'},}
+# Set the blocks in youre inventory
+replaceitem entity @a[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:'"Rood","color":"red"}'},}
+replaceitem entity @a[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:'"Blauw","color":"red"}'},}
+replaceitem entity @a[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:'"Spectator","color":"red"}'},}
 # Trigger commands
 scoreboard players enable @a leave
 execute as @a[scores={leave=1..}] run function mcquest:exit
