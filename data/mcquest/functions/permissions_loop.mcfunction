@@ -48,6 +48,9 @@ kill @e[nbt={Item:{tag:{mcquest:1b}}}]
 replaceitem entity @e[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:'"Rood","color":"red"}'},}
 replaceitem entity @e[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:'"Blauw","color":"red"}'},}
 replaceitem entity @e[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:'"Spectator","color":"red"}'},}
-
+# Trigger commands
+scoreboard players enable @a leave
+execute as @a[scores={leave=1..}] run function mcquest:exit
+scoreboard players reset @a leave
 # Only mods are operator
 function mcquest:set_op
