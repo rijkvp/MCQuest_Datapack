@@ -2,6 +2,7 @@
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
+scoreboard objectives add leave trigger
 #setup gamerule's
 gamerule commandBlockOutput false
 gamerule mobGriefing false
