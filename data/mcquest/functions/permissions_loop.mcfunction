@@ -26,17 +26,16 @@ scoreboard players add @e[tag=timer_tag,limit=1] timer 1
 # Display timer
 execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=timer_tag,limit=1] timer
 
-# Some timer checks
-execute at @e[scores={timer=42000..}] run tellraw @a "We zijn op de helft!"
-execute at @e[scores={timer=40200..}] run tellraw @a "Nog een half uur!"
-execute at @e[scores={timer=83400..}] run tellraw @a "Nog 10 minuten!"
-execute at @e[scores={timer=83700..}] run tellraw @a "Nog 5 minuten!"
-execute at @e[scores={timer=83995..}] run tellraw @a "Nog 5 seconden!"
-execute at @e[scores={timer=83996..}] run tellraw @a "Nog 4 seconden!"
-execute at @e[scores={timer=83997..}] run tellraw @a "Nog 3 seconden!"
-execute at @e[scores={timer=83998..}] run tellraw @a "Nog 2 seconden!"
-execute at @e[scores={timer=83999..}] run tellraw @a "Nog 1 seconde!"
-execute at @e[scores={timer=84000..}] run function mcquest:end
+# Time left messages 
+execute at @e[scores={timer=48000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 30","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]
+execute at @e[scores={timer=78000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 5","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]
+execute at @e[scores={timer=82800}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 1","bold":true,"color":"#F28003"},{"text":" minuut!","color":"yellow"}]
+execute at @e[scores={timer=83900}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 5","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
+execute at @e[scores={timer=83920}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 4","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
+execute at @e[scores={timer=83940}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 3","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
+execute at @e[scores={timer=83960}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 2","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
+execute at @e[scores={timer=83980}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 1","bold":true,"color":"#F28003"},{"text":" seconde!","color":"yellow"}]
+execute at @e[scores={timer=84000}] run function mcquest:end
 
 #Drop GUI
 
