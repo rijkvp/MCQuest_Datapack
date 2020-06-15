@@ -9,8 +9,8 @@ gamemode adventure @a[team=]
 
 gamemode spectator @a[team=spec]
 # Give night vision and invis to moderators
-effect give @a[team=mod] minecraft:night_vision 1000000 255 true
-effect give @a[team=mod] minecraft:invisibility 1000000 255 true
+effect give @a[team=mod] minecraft:night_vision 1 255 true
+effect give @a[team=mod] minecraft:invisibility 1 255 true
 
 
 # Send message if you're not in a team yet 
