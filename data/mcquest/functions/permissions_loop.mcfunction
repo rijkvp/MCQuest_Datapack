@@ -50,6 +50,6 @@ replaceitem entity @e[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Na
 # Trigger commands
 scoreboard players enable @a leave
 execute as @a[scores={leave=1..}] run function mcquest:exit
-scoreboard players reset @a leave
+scoreboard players set @a leave 0
 # Only mods are operator
 function mcquest:set_op
