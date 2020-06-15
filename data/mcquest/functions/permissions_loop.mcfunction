@@ -16,8 +16,10 @@ effect give @a[team=mod] minecraft:invisibility 1000000 255 true
 # Send message if you're not in a team yet 
 title @a[team=] actionbar ["",{"text":"Je bent nog niet aan een team toegevoegd!","bold":true,"underlined":true,"color":"dark_red"}]
 # Give you regeneration and night vision if you are not in a team yet
-effect give @e[team=] minecraft:regeneration 2 255 true
-effect give @e[team=] minecraft:night_vision 2 255 true
+effect give @e[team=,gamemode=adventure] minecraft:regeneration 2 255 true
+effect give @e[team=,gamemode=adventure] minecraft:resistance 2 255 true
+effect give @e[team=,gamemode=adventure] minecraft:weakness 2 255 true
+effect give @e[team=,gamemode=adventure] minecraft:invisibility 2 255 true
 # Bars
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
