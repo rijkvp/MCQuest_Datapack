@@ -3,15 +3,19 @@ bossbar set minecraft:0 visible false
 bossbar set minecraft:1 visible true
 bossbar set minecraft:2 visible false
 
-#setup for start
+# Teleport everyone to spawn & set gm to survival
 gamerule showDeathMessages false
 gamerule doImmediateRespawn true
 clear @a
 kill @a
 gamerule showDeathMessages true
 gamerule doImmediateRespawn false
+gamemode survival @a[team=!mod]
+
+# Gamerules
+gamerule doDaylightCycle true
+gamerule doMobSpawning true
 defaultgamemode survival
-gamemode survival @a[team=!mod] 
 
 # Remove old timer
 bossbar set minecraft:1 value 0
@@ -27,9 +31,9 @@ scoreboard objectives add timer dummy "game-timer"
 scoreboard players set @e[tag=timer_tag,limit=1] timer 0
 bossbar set minecraft:1 max 84000
 
-# Reset time
+# Reset time & weather
 time set 0
-weather clear
+weather clear weather clear 12000
 
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]

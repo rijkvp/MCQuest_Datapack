@@ -1,14 +1,19 @@
-#setup for the scoreboards
+# Create scoreboards
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
 scoreboard objectives add leave trigger
-#setup gamerule's
+
+# Gamerules
 gamerule commandBlockOutput false
 gamerule mobGriefing false
 gamerule sendCommandFeedback true
 gamerule spectatorsGenerateChunks false
+gamerule doDaylightCycle false
+gamerule doMobSpawning false
+defaultgamemode survival
 difficulty easy
+
 # Create the teams
 team add blauw "Blauw"
 team add rood "Rood"
