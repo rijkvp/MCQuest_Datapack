@@ -3,6 +3,7 @@
 
 # Only if the game has been started and not ended yet
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec,scores={deaths=0}]
+execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 
 # Set gm to adventure if you're not in a team
 gamemode adventure @a[team=,scores={deaths=0}]
@@ -21,8 +22,8 @@ execute as @a[scores={deaths=1..}] run effect give @s minecraft:invisibility 2 2
 # Send message if you're not in a team yet
 title @a[team=] actionbar ["",{"text":"Kies een team met de blokken in je inventory!","bold":true,"underlined":true,"color":"dark_red"}]
 # Give you regeneration and night vision if you are not in a team yet
-effect give @a[gamemode=adventure] minecraft:regeneration 2 255 true
-effect give @a[gamemode=adventure] minecraft:resistance 2 255 true
+effect give @a[team=] minecraft:regeneration 2 255 true
+effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 # Bars
