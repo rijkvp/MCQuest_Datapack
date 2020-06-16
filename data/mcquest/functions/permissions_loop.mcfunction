@@ -11,8 +11,12 @@ gamemode spectator @a[team=spec]
 # Give night vision and invis to moderators
 effect give @a[team=mod] minecraft:night_vision 16 255 true
 effect give @a[team=mod] minecraft:invisibility 2 255 true
-
-
+# Execute commands if you are dead
+execute as @a[scores={deaths=1..}] run effect give @s minecraft:regeneration 2 255 true
+execute as @a[scores={deaths=1..}] run effect give @s minecraft:resistance 2 255 true
+execute as @a[scores={deaths=1..}] run effect give @s minecraft:weakness 2 255 true
+execute as @a[scores={deaths=1..}] run effect give @s minecraft:saturation 2 255 true
+execute as @a[scores={deaths=1..}] run effect give @s minecraft:invisibility 2 255 true
 # Send message if you're not in a team yet
 title @a[team=] actionbar ["",{"text":"Kies een team met de blokken in je inventory!","bold":true,"underlined":true,"color":"dark_red"}]
 # Give you regeneration and night vision if you are not in a team yet
