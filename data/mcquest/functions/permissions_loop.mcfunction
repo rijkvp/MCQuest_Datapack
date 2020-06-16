@@ -2,7 +2,6 @@
 # NOT NEEDED ANYMORE: gamemode survival @a[team=!mod, team=!, team=!spec, gamemode=!adventure]
 
 # Only if the game has been started and not ended yet
-execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec,scores={deaths=0}]
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 
 # Set gm to adventure if you're not in a team
