@@ -18,7 +18,7 @@ effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 execute as @a[scores={deaths=1..}] run function mcquest:death_handler
 
 # Give you regeneration and night vision if you are not in a team yet
-effect give @a[team=] minecraft:regeneration  255 true
+effect give @a[team=] minecraft:regeneration 2 255 true
 effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
