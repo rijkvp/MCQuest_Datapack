@@ -1,1 +1,1 @@
-{"mcquest":{"$func":["start"]}}
+{"mcquest":{"$func":["start","death_handler"]}}
