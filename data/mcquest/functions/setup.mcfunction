@@ -45,6 +45,12 @@ team modify mod collisionRule never
 team modify mod nametagVisibility hideForOtherTeams
 team modify mod seeFriendlyInvisibles true
 
+# Remove old timer
+bossbar set minecraft:1 value 0
+bossbar set minecraft:1 style notched_20
+scoreboard objectives remove timer
+kill @e[type=minecraft:armor_stand]
+tag @e remove timer_tag
 
 # Set all gamemodes to adventure
 defaultgamemode adventure
