@@ -8,6 +8,7 @@ scoreboard objectives setdisplay belowName Health
 scoreboard objectives add leave trigger
 
 # Gamerules
+gamerule doImmediateRespawn true
 gamerule commandBlockOutput false
 gamerule mobGriefing false
 gamerule sendCommandFeedback true
