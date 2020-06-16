@@ -2,6 +2,9 @@
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
+scoreboard objectives add Health health
+scoreboard objectives setdisplay list Health
+scoreboard objectives setdisplay belowName Health
 scoreboard objectives add leave trigger
 
 # Gamerules
