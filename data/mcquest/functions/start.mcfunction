@@ -8,7 +8,7 @@ gamerule showDeathMessages false
 gamerule doImmediateRespawn true
 clear @a
 kill @a
-gamerule showDeathMessages true
+gamerule showDeathMessages false
 gamerule doImmediateRespawn true
 gamemode survival @a[team=!mod]
 
