@@ -12,6 +12,7 @@ gamemode spectator @a[team=spec]
 effect give @a[team=mod] minecraft:night_vision 16 255 true
 effect give @a[team=mod] minecraft:invisibility 2 255 true
 # Execute commands if you are dead
+gamemode adventure @a[scores={deaths=1..}]
 execute as @a[scores={deaths=1..}] run effect give @s minecraft:regeneration 2 255 true
 execute as @a[scores={deaths=1..}] run effect give @s minecraft:resistance 2 255 true
 execute as @a[scores={deaths=1..}] run effect give @s minecraft:weakness 2 255 true
