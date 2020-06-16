@@ -1,7 +1,7 @@
 # Set gm to survival if you're not an mod and in another team
-# NOT NEEDED ANYMORE: gamemode survival @a[team=!mod, team=!, team=!spec, gamemode=!adventure]
 
 # Only if the game has been started and not ended yet
+# @a[team!=] (in a team) @a[team=] (not in a team) 
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 
 # Set gm to adventure if you're not in a team
