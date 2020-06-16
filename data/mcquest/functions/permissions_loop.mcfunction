@@ -9,11 +9,11 @@ gamemode adventure @a[team=]
 
 gamemode spectator @a[team=spec]
 # Give night vision and invis to moderators
-effect give @a[team=mod] minecraft:night_vision 2 255 true
+effect give @a[team=mod] minecraft:night_vision 16 255 true
 effect give @a[team=mod] minecraft:invisibility 2 255 true
 
 
-# Send message if you're not in a team yet 
+# Send message if you're not in a team yet
 title @a[team=] actionbar ["",{"text":"Kies een team met de blokken in je inventory!","bold":true,"underlined":true,"color":"dark_red"}]
 # Give you regeneration and night vision if you are not in a team yet
 effect give @a[gamemode=adventure] minecraft:regeneration 2 255 true
@@ -30,7 +30,7 @@ scoreboard players add @e[tag=timer_tag,limit=1] timer 1
 # Display timer
 execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=timer_tag,limit=1] timer
 
-# Time left messages 
+# Time left messages
 execute at @e[scores={timer=48000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 30","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]
 execute at @e[scores={timer=48000}] run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 1.0 1.0
 execute at @e[scores={timer=78000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 5","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]
