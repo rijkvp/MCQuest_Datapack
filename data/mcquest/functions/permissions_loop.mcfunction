@@ -5,7 +5,7 @@
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 
 # Set gm to adventure if you're not in a team
-gamemode adventure @a[team=,scores={deaths=1..}]
+gamemode adventure @a[team=,scores={deaths=0}]
 
 gamemode spectator @a[team=spec]
 # Give night vision and invis to moderators
