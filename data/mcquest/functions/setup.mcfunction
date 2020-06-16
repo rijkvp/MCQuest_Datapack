@@ -2,10 +2,12 @@
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
-scoreboard objectives add Health health
-scoreboard objectives setdisplay list Health
-scoreboard objectives setdisplay belowName Health
+scoreboard objectives add health health
+scoreboard objectives setdisplay list health
+scoreboard objectives setdisplay belowName health
 scoreboard objectives add leave trigger
+scoreboard objectives add deaths deathCount
+scoreboard players set @a deaths 0
 
 # Gamerules
 gamerule commandBlockOutput false
@@ -78,14 +80,17 @@ bossbar set minecraft:2 value 1
 bossbar set minecraft:0 visible true
 bossbar set minecraft:1 visible false
 bossbar set minecraft:2 visible false
+
 # Message that it has been successfully executed
 tellraw @a[team=mod] ["",{"text":"Setup functie is uitgevoerd","bold":true,"color":"gold"}]
 title @a subtitle {"text":"Begint zo!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 tellraw @a ["",{"text":"De MCQuest begint zo!","color":"yellow"}]
+
 # Play sound
 execute as @a run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1.0 1.0 1.0
-# Clear deaths
-scoreboard players set @a deaths 0
+
+
+
 # Call Default Mods function
 function mcquest:default_mods
