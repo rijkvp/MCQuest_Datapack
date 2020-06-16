@@ -10,6 +10,7 @@ scoreboard objectives add deaths deathCount
 scoreboard players set @a deaths 0
 
 # Gamerules
+gamerule doImmediateRespawn true
 gamerule commandBlockOutput false
 gamerule mobGriefing false
 gamerule sendCommandFeedback true
