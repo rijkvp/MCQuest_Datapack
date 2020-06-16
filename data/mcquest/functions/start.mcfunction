@@ -5,7 +5,7 @@ bossbar set minecraft:2 visible false
 
 # Teleport everyone to spawn & set gm to survival
 gamerule showDeathMessages false
-gamerule doImmediateRespawn true
+gamerule doImmediateRespawn false
 clear @a
 kill @a
 gamerule showDeathMessages true
