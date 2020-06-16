@@ -1,11 +1,12 @@
 # Set gm to survival if you're not an mod and in another team
+# NOT NEEDED ANYMORE: gamemode survival @a[team=!mod, team=!, team=!spec, gamemode=!adventure]
 
 # Only if the game has been started and not ended yet
-# @a[team!=] (in a team) @a[team=] (not in a team) 
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 
 # Set gm to adventure if you're not in a team
 gamemode adventure @a[team=,scores={deaths=0}]
+
 
 gamemode spectator @a[team=spec]
 # Give night vision and invis to moderators
@@ -13,15 +14,12 @@ effect give @a[team=mod] minecraft:night_vision 16 255 true
 effect give @a[team=mod] minecraft:invisibility 2 255 true
 # Execute commands if you are dead
 gamemode adventure @a[scores={deaths=1..}]
-execute as @a[scores={deaths=1..}] run effect give @s minecraft:regeneration 2 255 true
-execute as @a[scores={deaths=1..}] run effect give @s minecraft:resistance 2 255 true
-execute as @a[scores={deaths=1..}] run effect give @s minecraft:weakness 2 255 true
-execute as @a[scores={deaths=1..}] run effect give @s minecraft:saturation 2 255 true
-execute as @a[scores={deaths=1..}] run effect give @s minecraft:invisibility 2 255 true
+execute as @a[scores={Death=1..}] run function mcquest:DeathHandler
+
 # Send message if you're not in a team yet
 title @a[team=] actionbar ["",{"text":"Kies een team met de blokken in je inventory!","bold":true,"underlined":true,"color":"dark_red"}]
 # Give you regeneration and night vision if you are not in a team yet
-effect give @a[team=] minecraft:regeneration 2 255 true
+effect give @a[team=] minecraft:regeneration  255 true
 effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
