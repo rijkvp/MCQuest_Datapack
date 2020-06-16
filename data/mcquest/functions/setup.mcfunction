@@ -79,5 +79,7 @@ title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Qu
 tellraw @a ["",{"text":"De MCQuest begint zo!","color":"yellow"}]
 # Play sound
 execute as @a run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1.0 1.0 1.0
+# Clear deaths
+scoreboard players set @a deaths 0
 # Call Default Mods function
 function mcquest:default_mods
