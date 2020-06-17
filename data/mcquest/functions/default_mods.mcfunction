@@ -8,3 +8,4 @@ team join mod AltijdYourigames
 gamemode creative @a[team=mod]
 # Continue with op function
 function mcquest:set_op
+# plz niet verwijderen :')
