@@ -10,4 +10,3 @@ summon lightning_bolt
 gamerule doImmediateRespawn true
 scoreboard players set @s deaths 0
 gamerule doFireTick true
-team join spec @s

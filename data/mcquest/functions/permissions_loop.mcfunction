@@ -2,7 +2,7 @@
 
 # @a[team!=] (in a team) @a[team=] (not in a team) 
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
-gamemode adventure @a[team=, scores={deaths=0}]
+gamemode adventure @a[team=,scores={deaths=0}]
 gamemode spectator @a[team=spec]
 
 # Night vision & invis for mods
@@ -15,7 +15,7 @@ effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
 # Execute commands if you are dead
-execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
+execute as @a[scores={deaths=1..},team=!mod] run function mcquest:death_handler
 
 # Give you regeneration and night vision if you are not in a team yet
 effect give @a[team=] minecraft:regeneration 2 255 true
