@@ -11,3 +11,6 @@ gamerule doImmediateRespawn true
 scoreboard players set @s deaths 0
 gamerule doFireTick true
 team join spec @s
+title @s times 20 120 20
+title @s subtitle {"text":"Je bent dood gegaan!","color":"red"}
+title @s title {"text":"GAME OVER!","bold":true,"underlined":true,"color":"dark_red"}

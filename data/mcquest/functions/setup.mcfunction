@@ -5,7 +5,7 @@ scoreboard objectives add select dummy
 scoreboard objectives add health health
 scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay belowName health
-scoreboard objectives add leave trigger
+# scoreboard objectives add leave trigger
 scoreboard objectives add deaths deathCount
 scoreboard players set @a deaths 0
 
@@ -17,7 +17,7 @@ gamerule sendCommandFeedback true
 gamerule spectatorsGenerateChunks false
 gamerule doDaylightCycle false
 gamerule doMobSpawning false
-defaultgamemode survival
+defaultgamemode adventure
 difficulty easy
 
 # Create the teams
@@ -55,10 +55,6 @@ scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove timer_tag
 
-# Set all gamemodes to adventure
-defaultgamemode adventure
-gamemode adventure @a[team=!mod]
-
 # Setup the bossbars
 bossbar add 0 "MCQ - Pre-Game"
 bossbar add 1 "MCQ - Game (test 1 minuut)"
@@ -81,6 +77,8 @@ bossbar set minecraft:2 value 1
 bossbar set minecraft:0 visible true
 bossbar set minecraft:1 visible false
 bossbar set minecraft:2 visible false
+
+function mcquest:default_mods
 
 # Message that it has been successfully executed
 tellraw @a ["",{"text":"De MCQuest is succesvol opgezet!","color":"yellow"}]

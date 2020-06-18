@@ -8,6 +8,7 @@ gamemode spectator @a[team=spec]
 # Night vision & invis for mods
 effect give @a[team=mod] minecraft:night_vision 16 255 true
 effect give @a[team=mod] minecraft:invisibility 2 255 true
+
 # No pvp/damage if in adventure
 effect give @a[gamemode=adventure] minecraft:regeneration 2 255 true
 effect give @a[gamemode=adventure] minecraft:resistance 2 255 true
@@ -15,7 +16,7 @@ effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
 # Execute commands if you are dead
-execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
+execute if score @e[tag=timer_tag, limit=1] timer matches 200..72000 run execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
 
 # Give you regeneration and night vision if you are not in a team yet
 effect give @a[team=] minecraft:regeneration 2 255 true
@@ -60,9 +61,11 @@ kill @e[nbt={Item:{tag:{mcquest:1b}}}]
 replaceitem entity @a[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:'"Rood","color":"red"}'},}
 replaceitem entity @a[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:'"Blauw","color":"red"}'},}
 replaceitem entity @a[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:'"Spectator","color":"red"}'},}
-# Trigger commands
-scoreboard players enable @a leave
-execute as @a[scores={leave=1..}] run function mcquest:exit
-scoreboard players set @a leave 0
+
+# Trigger commands - NOT NEEDED ANYMORE & DOESN'T WORK
+# scoreboard players enable @a leave
+# execute as @a[scores={leave=1..}, team=!spectator] run function mcquest:leave_team
+# scoreboard players set @a leave 0
+
 # Only mods are operator
 function mcquest:set_op

@@ -1,4 +1,4 @@
-# Give some people the moderator team / permisions
+# Give some people the moderator team / permissions
 
 team join mod richelbilderbeek
 team join mod MinecraftyDaan
