@@ -1,4 +1,4 @@
-#set bossbar visibility
+# Set bossbar visibility
 bossbar set minecraft:0 visible false
 bossbar set minecraft:1 visible true
 bossbar set minecraft:2 visible false
@@ -39,5 +39,3 @@ title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 schedule function mcquest:playsound 1t
 tellraw @a ["",{"text":"Credits:","bold":true,"italic":true,"color":"light_purple"},{"text":"\n"},{"text":"Rijk","bold":true,"italic":true,"color":"dark_red"},{"text":" (Rycoder) ","italic":true},{"text":"- Server host, hoofd datapack zaken","italic":true,"color":"dark_gray"},{"text":"\n","italic":true},{"text":"Youri","bold":true,"italic":true,"color":"dark_red"},{"text":" (AltijdYouriGames) ","italic":true},{"text":"- Helper en maker van gui","italic":true,"color":"dark_gray"},{"text":"\n","italic":true},{"text":"Daan","bold":true,"italic":true,"color":"dark_red"},{"text":" (MinecraftyDaan) ","italic":true},{"text":"- Oude server host, Helper en maker van deze tekst :)","italic":true,"color":"dark_gray"},{"text":"\n"},{"text":"Richel","bold":true,"italic":true,"color":"dark_red"},{"text":" (richelbilderbeek) ","italic":true},{"text":"- Bedenker en lui iemand die verder niets doet","italic":true,"color":"dark_gray"},{"text":"\n"},{"text":"Veel plezier!","bold":true,"italic":true,"underlined":true,"color":"yellow"},{"text":"\n\n "}]
-# Play some music
-function mcquest:nice_music
