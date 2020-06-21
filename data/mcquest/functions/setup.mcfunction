@@ -10,8 +10,6 @@ scoreboard objectives add deaths deathCount
 scoreboard players set @a deaths 0
 
 # Gamerules
-# Do only turn on immediate respawn if playing UHC 
-gamerule doImmediateRespawn false
 gamerule commandBlockOutput false
 gamerule mobGriefing false
 gamerule sendCommandFeedback true

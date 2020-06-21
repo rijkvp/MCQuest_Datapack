@@ -8,8 +8,11 @@ gamerule showDeathMessages false
 gamerule doImmediateRespawn true
 clear @a
 kill @a
-gamerule showDeathMessages false
-gamerule doImmediateRespawn true
+gamerule showDeathMessages true
+
+# Do only turn on immediate respawn if playing UHC 
+gamerule doImmediateRespawn false
+
 gamemode survival @a[team=!mod]
 
 # Gamerules
