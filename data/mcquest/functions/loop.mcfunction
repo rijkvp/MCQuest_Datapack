@@ -1,6 +1,6 @@
 # GAMEMODES
 
-# @a[team!=] (in a team) @a[team=] (not in a team) 
+# @a[team!=] (in a team) @a[team=] (not in a team)
 execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 gamemode adventure @a[team=, scores={deaths=0}]
 gamemode spectator @a[team=spec]
@@ -59,9 +59,9 @@ execute as @a[scores={drop=1..}] run function mcquest:get_slot
 kill @e[nbt={Item:{tag:{mcquest:1b}}}]
 
 # Set the blocks in youre inventory
-replaceitem entity @a[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:'"Rood","color":"red"}'},}
-replaceitem entity @a[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:'"Blauw","color":"red"}'},}
-replaceitem entity @a[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:'"Spectator","color":"red"}'},}
+replaceitem entity @a[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:"{\"text\":\"Rood\",\"color\":\"red\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:"{\"text\":\"Blauw\",\"color\":\"blue\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:"{\"text\":\"Spectator\",\"color\":\"white\",\"bold\":\"true\"}"},}
 
 # Trigger commands - NOT NEEDED ANYMORE & DOESN'T WORK
 # scoreboard players enable @a leave
