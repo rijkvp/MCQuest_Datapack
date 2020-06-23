@@ -59,9 +59,9 @@ execute as @a[scores={drop=1..}] run function mcquest:get_slot
 kill @e[nbt={Item:{tag:{mcquest:1b}}}]
 
 # Set the blocks in youre inventory
-replaceitem entity @a[team=] hotbar.3 minecraft:red_wool{mcquest:1b,display:{Name:"{\"text\":\"Rood\",\"color\":\"red\",\"bold\":\"true\"}"},}
-replaceitem entity @a[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Name:"{\"text\":\"Blauw\",\"color\":\"blue\",\"bold\":\"true\"}"},}
-replaceitem entity @a[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:"{\"text\":\"Spectator\",\"color\":\"gray\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.3 minecraft:red_concrete{mcquest:1b,display:{Name:"{\"text\":\"Rood\",\"color\":\"red\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.5 minecraft:blue_concrete{mcquest:1b,display:{Name:"{\"text\":\"Blauw\",\"color\":\"blue\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.4 minecraft:light_gray_concrete{mcquest:1b,display:{Name:"{\"text\":\"Spectator\",\"color\":\"gray\",\"bold\":\"true\"}"},}
 
 # Trigger commands - NOT NEEDED ANYMORE & DOESN'T WORK
 scoreboard players enable @a credits
