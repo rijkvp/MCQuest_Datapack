@@ -3,6 +3,9 @@ scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
 scoreboard objectives add health health
+scoreboard objectives add credits trigger
+scoreboard objectives add message trigger
+scoreboard players set @a message 1
 scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay belowName health
 # scoreboard objectives add leave trigger
@@ -79,5 +82,6 @@ bossbar set minecraft:2 visible false
 
 function mcquest:default_mods
 
+execute as @a[scores={message=1..}] run function mcquest:message
 # Message that it has been successfully executed
-tellraw @a ["",{"text":"De MCQuest is succesvol opgezet!","color":"yellow"}]
+tellraw @a ["",{"text":"\n"},{"text":"De MCQuest is succesvol opgezet!","color":"yellow"}]

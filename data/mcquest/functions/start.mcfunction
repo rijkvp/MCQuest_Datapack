@@ -3,16 +3,15 @@ bossbar set minecraft:0 visible false
 bossbar set minecraft:1 visible true
 bossbar set minecraft:2 visible false
 
-# Teleport everyone to spawn & set gm to survival
-gamerule showDeathMessages false
-gamerule doImmediateRespawn true
+# Teleport everyone to spawn
 clear @a
-kill @a
-gamerule showDeathMessages true
+execute at @s run spreadplayers ~ ~ 5 5 true @a
+execute as @a[team=blauw] run execute at @s run tp @s ~ ~ ~ 90.0 0
+execute as @a[team=rood] run execute at @s run tp @s ~ ~ ~ -90.0 0
 
-# Do only turn on immediate respawn if playing UHC 
+
+# Do only turn on immediate respawn if playing UHC
 gamerule doImmediateRespawn false
-
 gamemode survival @a[team=!mod]
 
 # Gamerules
@@ -42,4 +41,5 @@ weather clear 12000
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 schedule function mcquest:playsound 1t
-tellraw @a ["",{"text":"Credits:","bold":true,"italic":true,"color":"light_purple"},{"text":"\n"},{"text":"Rijk","bold":true,"italic":true,"color":"dark_red"},{"text":" (Rycoder) ","italic":true},{"text":"- Server host, hoofd datapack zaken","italic":true,"color":"dark_gray"},{"text":"\n","italic":true},{"text":"Youri","bold":true,"italic":true,"color":"dark_red"},{"text":" (AltijdYouriGames) ","italic":true},{"text":"- Helper en maker van gui","italic":true,"color":"dark_gray"},{"text":"\n","italic":true},{"text":"Daan","bold":true,"italic":true,"color":"dark_red"},{"text":" (MinecraftyDaan) ","italic":true},{"text":"- Oude server host, Helper en maker van deze tekst :)","italic":true,"color":"dark_gray"},{"text":"\n"},{"text":"Richel","bold":true,"italic":true,"color":"dark_red"},{"text":" (richelbilderbeek) ","italic":true},{"text":"- Bedenker en lui iemand die verder niets doet","italic":true,"color":"dark_gray"},{"text":"\n"},{"text":"Veel plezier!","bold":true,"italic":true,"underlined":true,"color":"yellow"},{"text":"\n\n "}]
+scoreboard players set @a credits 1
+tellraw @a {"text":"Veel plezier","bold":true,"italic":true,"underlined":true,"color":"yellow","clickEvent":{"action":"suggest_command","value":"Veel plezier xD"},"hoverEvent":{"action":"show_text","value":["",{"text":"V","bold":true,"italic":true,"underlined":true,"color":"dark_blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_green"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_aqua"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"dark_red"},{"text":" p","bold":true,"italic":true,"underlined":true,"color":"dark_purple"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"gold"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"gray"},{"text":"z","bold":true,"italic":true,"underlined":true,"color":"dark_gray"},{"text":"i","bold":true,"italic":true,"underlined":true,"color":"blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"green"},{"text":"r","bold":true,"italic":true,"underlined":true,"color":"aqua"}]}}
