@@ -3,16 +3,15 @@ bossbar set minecraft:0 visible false
 bossbar set minecraft:1 visible true
 bossbar set minecraft:2 visible false
 
-# Teleport everyone to spawn & set gm to survival
-gamerule showDeathMessages false
-gamerule doImmediateRespawn true
+# Teleport everyone to spawn
 clear @a
-kill @a
-gamerule showDeathMessages true
+execute at @s run spreadplayers ~ ~ 5 5 true @a
+execute as @a[team=blauw] run execute at @s run tp @s ~ ~ ~ 90.0 0
+execute as @a[team=rood] run execute at @s run tp @s ~ ~ ~ -90.0 0
+
 
 # Do only turn on immediate respawn if playing UHC
 gamerule doImmediateRespawn false
-
 gamemode survival @a[team=!mod]
 
 # Gamerules
