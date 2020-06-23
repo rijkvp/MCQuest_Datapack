@@ -42,4 +42,4 @@ weather clear 12000
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 schedule function mcquest:playsound 1t
-scoreboard players set @a credits 2
+scoreboard players set @a credits 1
