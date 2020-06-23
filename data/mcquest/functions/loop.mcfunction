@@ -63,9 +63,10 @@ replaceitem entity @a[team=] hotbar.3 minecraft:red_concrete{mcquest:1b,display:
 replaceitem entity @a[team=] hotbar.5 minecraft:blue_concrete{mcquest:1b,display:{Name:"{\"text\":\"Blauw\",\"color\":\"blue\",\"bold\":\"true\"}"},}
 replaceitem entity @a[team=] hotbar.4 minecraft:light_gray_concrete{mcquest:1b,display:{Name:"{\"text\":\"Spectator\",\"color\":\"gray\",\"bold\":\"true\"}"},}
 
-# Trigger commands - NOT NEEDED ANYMORE & DOESN'T WORK
+# Trigger commands
 scoreboard players enable @a credits
 scoreboard players enable @a message
+# Leave Trigger - DISABLED -  NOT NEEDED ANYMORE & DOESN'T WORK
 # execute as @a[scores={leave=1..}, team=!spectator] run function mcquest:leave_team
 # scoreboard players set @a leave 0
 
