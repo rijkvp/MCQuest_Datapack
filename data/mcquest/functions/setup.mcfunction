@@ -3,6 +3,9 @@ scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
 scoreboard objectives add health health
+scoreboard objectives add credits trigger
+scoreboard objectives add message trigger
+scoreboard players set @a message 1
 scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay belowName health
 # scoreboard objectives add leave trigger
@@ -78,6 +81,7 @@ bossbar set minecraft:1 visible false
 bossbar set minecraft:2 visible false
 
 function mcquest:default_mods
-
+tellraw @a[scores={message=1..}] {"text":"Veel plezier","bold":true,"italic":true,"underlined":true,"color":"yellow","clickEvent":{"action":"suggest_command","value":"Veel plezier xD"},"hoverEvent":{"action":"show_text","value":["",{"text":"V","bold":true,"italic":true,"underlined":true,"color":"dark_blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_green"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_aqua"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"dark_red"},{"text":" p","bold":true,"italic":true,"underlined":true,"color":"dark_purple"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"gold"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"gray"},{"text":"z","bold":true,"italic":true,"underlined":true,"color":"dark_gray"},{"text":"i","bold":true,"italic":true,"underlined":true,"color":"blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"green"},{"text":"r","bold":true,"italic":true,"underlined":true,"color":"aqua"}]}}
+execute as @a[scores={message=1..}] run function mcquest:message
 # Message that it has been successfully executed
-tellraw @a ["",{"text":"De MCQuest is succesvol opgezet!","color":"yellow"}]
+tellraw @a ["",{"text":"\n"},{"text":"De MCQuest is succesvol opgezet!","color":"yellow"}]

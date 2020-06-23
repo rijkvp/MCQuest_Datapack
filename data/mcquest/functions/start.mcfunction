@@ -10,7 +10,7 @@ clear @a
 kill @a
 gamerule showDeathMessages true
 
-# Do only turn on immediate respawn if playing UHC 
+# Do only turn on immediate respawn if playing UHC
 gamerule doImmediateRespawn false
 
 gamemode survival @a[team=!mod]
@@ -42,4 +42,4 @@ weather clear 12000
 title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 schedule function mcquest:playsound 1t
-tellraw @a ["",{"text":"Credits:","bold":true,"italic":true,"color":"light_purple"},{"text":"\n"},{"text":"Rijk","bold":true,"italic":true,"color":"dark_red"},{"text":" (Rycoder) ","italic":true},{"text":"- Server host, hoofd datapack zaken","italic":true,"color":"dark_gray"},{"text":"\n","italic":true},{"text":"Youri","bold":true,"italic":true,"color":"dark_red"},{"text":" (AltijdYouriGames) ","italic":true},{"text":"- Helper en maker van gui","italic":true,"color":"dark_gray"},{"text":"\n","italic":true},{"text":"Daan","bold":true,"italic":true,"color":"dark_red"},{"text":" (MinecraftyDaan) ","italic":true},{"text":"- Oude server host, Helper en maker van deze tekst :)","italic":true,"color":"dark_gray"},{"text":"\n"},{"text":"Richel","bold":true,"italic":true,"color":"dark_red"},{"text":" (richelbilderbeek) ","italic":true},{"text":"- Bedenker en lui iemand die verder niets doet","italic":true,"color":"dark_gray"},{"text":"\n"},{"text":"Veel plezier!","bold":true,"italic":true,"underlined":true,"color":"yellow"},{"text":"\n\n "}]
+scoreboard players set @a credits 2

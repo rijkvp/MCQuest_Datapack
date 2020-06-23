@@ -64,9 +64,19 @@ replaceitem entity @a[team=] hotbar.5 minecraft:blue_wool{mcquest:1b,display:{Na
 replaceitem entity @a[team=] hotbar.4 minecraft:gray_wool{mcquest:1b,display:{Name:"{\"text\":\"Spectator\",\"color\":\"white\",\"bold\":\"true\"}"},}
 
 # Trigger commands - NOT NEEDED ANYMORE & DOESN'T WORK
-# scoreboard players enable @a leave
+scoreboard players enable @a credits
+scoreboard players enable @a message
 # execute as @a[scores={leave=1..}, team=!spectator] run function mcquest:leave_team
 # scoreboard players set @a leave 0
+
+#credits
+execute as @a[scores={credits=1}] run function mcquest:message2
+execute as @a[scores={message=2}] run function mcquest:credits/rijk
+execute as @a[scores={message=3}] run function mcquest:credits/youri
+execute as @a[scores={message=4}] run function mcquest:credits/daan
+execute as @a[scores={message=5}] run function mcquest:credits/richel
+execute as @a[scores={message=6..}] run function mcquest:credits/error
+execute as @a[scores={credits=2..}] run function mcquest:credits/error
 
 # Only mods are operator
 function mcquest:set_op
