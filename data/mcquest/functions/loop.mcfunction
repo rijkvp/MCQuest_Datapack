@@ -81,3 +81,5 @@ execute as @a[scores={credits=2..}] run function mcquest:credits/error
 
 # Only mods are operator
 function mcquest:set_op
+
+say hi
