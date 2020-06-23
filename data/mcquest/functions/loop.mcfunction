@@ -75,7 +75,6 @@ execute as @a[scores={message=2}] run function mcquest:credits/rijk
 execute as @a[scores={message=3}] run function mcquest:credits/youri
 execute as @a[scores={message=4}] run function mcquest:credits/daan
 execute as @a[scores={message=5}] run function mcquest:credits/richel
-execute as @a[scores={message=6}] run function mcquest:credits/daan2
 execute as @a[scores={message=7..}] run function mcquest:credits/error
 execute as @a[scores={credits=2..}] run function mcquest:credits/error
 
