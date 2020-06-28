@@ -52,7 +52,7 @@ execute at @e[scores={timer=83960}] run tellraw @a ["",{"text":"|","bold":true,"
 execute at @e[scores={timer=83960}] run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 0.5 1.0
 execute at @e[scores={timer=83980}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 1","bold":true,"color":"#F28003"},{"text":" seconde!","color":"yellow"}]
 execute at @e[scores={timer=83980}] run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 0.0 1.0
-execute at @e[scores={timer=84000}] run function mcquest:end
+execute at @e[scores={timer=72000}] run function mcquest:end
 
 # See if a player has 1 or more drops then run a function named mcquest:get_slot
 execute as @a[scores={drop=1..}] run function mcquest:get_slot
