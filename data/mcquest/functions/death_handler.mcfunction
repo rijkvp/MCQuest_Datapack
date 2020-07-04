@@ -6,7 +6,8 @@ effect give @s minecraft:invisibility 2 255 true
 gamerule doFireTick false
 gamerule doImmediateRespawn false
 tellraw @a ["",{"selector":"@s"},{"text":" is "},{"text":"DOOD GEGAAN!","bold":true,"underlined":true,"color":"dark_red"}]
-summon lightning_bolt
+# summon lightning_bolt NOT AT THE RIGHT POSITION
+playsound minecraft:entity.lightning_bolt.thunder master @a
 gamerule doImmediateRespawn true
 scoreboard players set @s deaths 0
 gamerule doFireTick true

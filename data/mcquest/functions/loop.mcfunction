@@ -1,7 +1,7 @@
 # GAMEMODES
 
 # @a[team!=] (in a team) @a[team=] (not in a team)
-execute if score @e[tag=timer_tag, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
+execute if score @e[tag=data_holder, limit=1] timer matches 0..72000 run gamemode survival @a[team=!, team=!mod, team=!spec]
 gamemode adventure @a[team=, scores={deaths=0}]
 gamemode spectator @a[team=spec]
 
@@ -16,8 +16,7 @@ effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
 # Execute commands if you are dead
-# Turned off for now, we are not playing UHC
-# execute if score @e[tag=timer_tag, limit=1] timer matches 200..72000 run execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
+execute if score @e[tag=data_holder, limit=1] respawn_disabled matches 1 run execute if score @e[tag=data_holder, limit=1] timer matches 0..72000 run execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
 
 # Give you regeneration and night vision if you are not in a team yet
 effect give @a[team=] minecraft:regeneration 2 255 true
@@ -31,9 +30,9 @@ bossbar set minecraft:1 players @a
 bossbar set minecraft:2 players @a
 
 # Add timer
-scoreboard players add @e[tag=timer_tag,limit=1] timer 1
+scoreboard players add @e[tag=data_holder,limit=1] timer 1
 # Display timer
-execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=timer_tag,limit=1] timer
+execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=data_holder,limit=1] timer
 
 # Time left messages
 execute at @e[scores={timer=36000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 30","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]

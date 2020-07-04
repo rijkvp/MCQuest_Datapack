@@ -55,7 +55,7 @@ bossbar set minecraft:1 value 0
 bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
-tag @e remove timer_tag
+tag @e remove data_holder
 
 # Setup the bossbars
 bossbar add 0 "MCQ - Pre-Game"
