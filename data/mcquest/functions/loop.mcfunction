@@ -24,6 +24,17 @@ effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
+#auto clear
+scoreboard players add @e[tag=tick] tick-timer 1
+scoreboard players remove @e[scores={tick-timer=20..,min-timer=0..}] min-timer 1
+scoreboard players set @e[scores={tick-timer=20..},tag=tick] tick-timer 0
+execute as @e[tag=tick,scores={min-timer=0}] run kill @e[type=!player,tag=!tick]
+execute as @e[tag=tick,scores={min-timer=0}] run title @a title {"text":"Cleared","color":"red"}
+scoreboard players add @e[tag=tick,scores={tick-timer=2,min-timer=-1}] min-timer 5
+
+#title
+title @p actionbar ["",{"text":" alle entities worden verwijderd over: ","bold":true,"underlined":true,"color":"dark_red"},{"score":{"name":"@e[tag=tick]","objective":"min-timer"},"bold":true,"color":"white"}]
+
 # Bars
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
