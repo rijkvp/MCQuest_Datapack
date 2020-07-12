@@ -6,7 +6,7 @@ bossbar set minecraft:2 visible false
 # Teleport everyone to spawn
 clear @a
 execute at @s run setworldspawn ~ ~ ~
-execute at @s run spawnpoint @a ~ ~ ~ 
+execute at @s run spawnpoint @a ~ ~ ~
 execute at @s run spreadplayers ~ ~ 5 5 true @a
 execute as @a[team=blauw] run execute at @s run tp @s ~ ~ ~ 90.0 0
 execute as @a[team=rood] run execute at @s run tp @s ~ ~ ~ -90.0 0
