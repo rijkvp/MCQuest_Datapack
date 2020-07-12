@@ -27,7 +27,7 @@ bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove data_holder
-scoreboard players set @a deaths 0
+scoreboard players set @a deaths 0 
 
 # Setup Timer
 summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
