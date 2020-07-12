@@ -27,8 +27,7 @@ bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove data_holder
-scoreboard players set @a deaths 0 
-
+scoreboard players set @a deaths 0
 # Setup Timer
 summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
 tag @e[type=minecraft:armor_stand, limit=1, tag=] add data_holder
@@ -48,3 +47,4 @@ title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Qu
 schedule function mcquest:playsound 1t
 scoreboard players set @a credits 1
 tellraw @a {"text":"Veel plezier","bold":true,"italic":true,"underlined":true,"color":"yellow","clickEvent":{"action":"suggest_command","value":"Veel plezier xD"},"hoverEvent":{"action":"show_text","value":["",{"text":"V","bold":true,"italic":true,"underlined":true,"color":"dark_blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_green"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_aqua"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"dark_red"},{"text":" p","bold":true,"italic":true,"underlined":true,"color":"dark_purple"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"gold"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"gray"},{"text":"z","bold":true,"italic":true,"underlined":true,"color":"dark_gray"},{"text":"i","bold":true,"italic":true,"underlined":true,"color":"blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"green"},{"text":"r","bold":true,"italic":true,"underlined":true,"color":"aqua"}]}}
+#test push
