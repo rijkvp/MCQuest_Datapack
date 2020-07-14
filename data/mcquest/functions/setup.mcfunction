@@ -25,8 +25,9 @@ defaultgamemode adventure
 difficulty easy
 
 #auto clear
-summon minecraft:armor_stand ~ ~ ~ {Small:1b,Invisible:1b,Health: 1.0f,NoGravity:1b}
-tag @e[type=minecraft:armor_stand] add tick
+summon minecraft:armor_stand ~ 255 ~ {Small:1b,Tags:["cTimer"]}
+scoreboard objectives add tick_timer dummy
+scoreboard objectives add min_timer dummy
 
 # Create the teams
 team add blauw "Blauw"

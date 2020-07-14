@@ -31,6 +31,8 @@ scoreboard players set @e[scores={tick-timer=20..},tag=tick] tick-timer 0
 execute as @e[tag=tick,scores={min-timer=0}] run kill @e[type=!player,tag=!tick]
 execute as @e[tag=tick,scores={min-timer=0}] run title @a title {"text":"Cleared","color":"red"}
 scoreboard players add @e[tag=tick,scores={tick-timer=2,min-timer=-1}] min-timer 5
+execute as @e[tag=cTimer,scores={tick_timer=20,min_timer=1..}] run title @a actionbar ["",{"text":"Entities worden verwijderd over: ","bold":true,"underlined":false,"color":"dark_red"},{"score":{"name":"@e[tag=cTimer]","objective":"min_timer"},"bold":true,"color":"white"}]
+scoreboard players set @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] min_timer -2
 
 #title
 title @p actionbar ["",{"text":" alle entities worden verwijderd over: ","bold":true,"underlined":true,"color":"dark_red"},{"score":{"name":"@e[tag=tick]","objective":"min-timer"},"bold":true,"color":"white"}]
@@ -44,6 +46,13 @@ bossbar set minecraft:2 players @a
 scoreboard players add @e[tag=data_holder,limit=1] timer 1
 # Display timer
 execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=data_holder,limit=1] timer
+
+#Clear
+scoreboard players add @e[tag=cTimer] tick_timer 1
+scoreboard players remove @e[tag=cTimer,scores={tick_timer=20,min_timer=-1..}] min_timer 1
+execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run title @a actionbar {"text":"Cleared","bold":"true","color":"green"}
+scoreboard players set @e[tag=cTimer,scores={tick_timer=21..}] tick_timer 0
+execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run kill @e[type=!minecraft:player,tag=!cTimer]
 
 # Time left messages
 execute at @e[scores={timer=36000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 30","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]
