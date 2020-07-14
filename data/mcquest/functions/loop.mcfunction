@@ -50,7 +50,7 @@ scoreboard players add @e[tag=cTimer] tick_timer 1
 scoreboard players remove @e[tag=cTimer,scores={tick_timer=20,min_timer=-1..}] min_timer 1
 execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run title @a actionbar {"text":"Cleared","bold":"true","color":"green"}
 scoreboard players set @e[tag=cTimer,scores={tick_timer=21..}] tick_timer 0
-execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run kill @e[type=items,tag=!cTimer]
+execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run kill @e[type=item,tag=!cTimer]
 
 # Time left messages
 execute at @e[scores={timer=36000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 30","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]
