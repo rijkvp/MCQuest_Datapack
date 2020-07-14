@@ -1,4 +1,6 @@
 # Create scoreboards
+scoreboard objectives add tick-timer dummy
+scoreboard objectives add min-timer dummy
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
@@ -21,6 +23,10 @@ gamerule doDaylightCycle false
 gamerule doMobSpawning false
 defaultgamemode adventure
 difficulty easy
+
+#auto clear
+summon minecraft:armor_stand ~ ~ ~ {Small:1b,Invisible:1b,Health: 1.0f,NoGravity:1b}
+tag @e[type=minecraft:armor_stand] add tick
 
 # Create the teams
 team add blauw "Blauw"
