@@ -34,9 +34,6 @@ scoreboard players add @e[tag=tick,scores={tick-timer=2,min-timer=-1}] min-timer
 execute as @e[tag=cTimer,scores={tick_timer=20,min_timer=1..}] run title @a actionbar ["",{"text":"Entities worden verwijderd over: ","bold":true,"underlined":false,"color":"dark_red"},{"score":{"name":"@e[tag=cTimer]","objective":"min_timer"},"bold":true,"color":"white"}]
 scoreboard players set @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] min_timer -2
 
-#title
-title @p actionbar ["",{"text":" alle entities worden verwijderd over: ","bold":true,"underlined":true,"color":"dark_red"},{"score":{"name":"@e[tag=tick]","objective":"min-timer"},"bold":true,"color":"white"}]
-
 # Bars
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
