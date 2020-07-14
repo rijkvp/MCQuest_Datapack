@@ -6,7 +6,7 @@ bossbar set minecraft:2 visible false
 # Teleport everyone to spawn
 clear @a
 execute at @s run setworldspawn ~ ~ ~
-execute at @s run spawnpoint @a ~ ~ ~ 
+execute at @s run spawnpoint @a ~ ~ ~
 execute at @s run spreadplayers ~ ~ 5 5 true @a
 execute as @a[team=blauw] run execute at @s run tp @s ~ ~ ~ 90.0 0
 execute as @a[team=rood] run execute at @s run tp @s ~ ~ ~ -90.0 0
@@ -28,6 +28,7 @@ scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove data_holder
 scoreboard players set @a deaths 0
+
 
 # Setup Timer
 summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
