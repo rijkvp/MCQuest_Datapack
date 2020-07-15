@@ -24,15 +24,7 @@ effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
-#auto clear
-scoreboard players add @e[tag=tick] tick-timer 1
-scoreboard players remove @e[scores={tick-timer=20..,min-timer=0..}] min-timer 1
-scoreboard players set @e[scores={tick-timer=20..},tag=tick] tick-timer 0
-execute as @e[tag=tick,scores={min-timer=0}] run kill @e[type=!player,tag=!tick]
-execute as @e[tag=tick,scores={min-timer=0}] run title @a title {"text":"Cleared","color":"red"}
-scoreboard players add @e[tag=tick,scores={tick-timer=2,min-timer=-1}] min-timer 5
-execute as @e[tag=cTimer,scores={tick_timer=20,min_timer=1..}] run title @a actionbar ["",{"text":"Items worden verwijderd over: ","bold":true,"underlined":false,"color":"dark_red"},{"score":{"name":"@e[tag=cTimer]","objective":"min_timer"},"bold":true,"color":"white"}]
-scoreboard players set @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] min_timer -2
+
 
 # Bars
 bossbar set minecraft:0 players @a
@@ -51,6 +43,8 @@ scoreboard players remove @e[tag=cTimer,scores={tick_timer=20,min_timer=-1..}] m
 execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run title @a actionbar {"text":"Cleared","bold":"true","color":"green"}
 scoreboard players set @e[tag=cTimer,scores={tick_timer=21..}] tick_timer 0
 execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run kill @e[type=item,tag=!cTimer]
+execute as @e[tag=cTimer,scores={min_timer=1..}] run title @a actionbar ["",{"text":"Items worden verwijderd over: ","bold":true,"underlined":false,"color":"dark_red"},{"score":{"name":"@e[tag=cTimer]","objective":"min_timer"},"bold":true,"color":"white"}]
+scoreboard players set @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] min_timer -2
 
 # Time left messages
 execute at @e[scores={timer=36000}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 30","bold":true,"color":"#F28003"},{"text":" minuten!","color":"yellow"}]

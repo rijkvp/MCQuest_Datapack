@@ -25,9 +25,9 @@ defaultgamemode adventure
 difficulty easy
 
 #auto clear
-summon minecraft:armor_stand ~ 255 ~ {Small:1b,Tags:["cTimer"]}
 scoreboard objectives add tick_timer dummy
 scoreboard objectives add min_timer dummy
+function mcquest:autoclear
 
 # Create the teams
 team add blauw "Blauw"
