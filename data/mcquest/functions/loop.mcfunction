@@ -37,7 +37,7 @@ scoreboard players add @e[tag=data_holder,limit=1] timer 1
 execute store result bossbar minecraft:1 value run scoreboard players get @e[tag=data_holder,limit=1] timer
 
 #Clear
-execute at @a[team=mod] unless entity @e[tag=cTimer] run summon minecraft:armor_stand ~ 255 ~ {Small:1b,Tags:["cTimer"]}
+execute at @a[team=mod,limit=1] unless entity @e[tag=cTimer] run summon minecraft:armor_stand ~ 255 ~ {Small:1b,Tags:["cTimer"],invisibility:1b}
 scoreboard players add @e[tag=cTimer] tick_timer 1
 scoreboard players remove @e[tag=cTimer,scores={tick_timer=20,min_timer=-1..}] min_timer 1
 execute as @e[tag=cTimer,scores={tick_timer=10,min_timer=-1}] run title @a actionbar {"text":"Cleared","bold":"true","color":"green"}
