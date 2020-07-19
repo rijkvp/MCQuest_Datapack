@@ -1,3 +1,6 @@
+#remove scoreboards
+scoreboard objectives remove click
+
 # Create scoreboards
 scoreboard objectives add tick-timer dummy
 scoreboard objectives add min-timer dummy

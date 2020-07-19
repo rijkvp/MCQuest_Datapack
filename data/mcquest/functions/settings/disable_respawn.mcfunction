@@ -1,4 +1,4 @@
-\scoreboard players reset @a deaths
+scoreboard players reset @a deaths
 scoreboard players set @e[tag=data_holder,limit=1] respawn_disabled 1
 title @a times 20 100 20
 title @a subtitle {"text":"Je kan nu niet meer respawnen!","color":"yellow"}
