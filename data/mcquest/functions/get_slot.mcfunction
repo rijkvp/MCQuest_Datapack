@@ -1,5 +1,5 @@
 #kill and reset everyting
-scoreboard players set @s drop 0
+scoreboard players set @s drop 1
 scoreboard players set #bool select 0
 kill @e[nbt={Item:{tag:{mcquest:1}}}]
 

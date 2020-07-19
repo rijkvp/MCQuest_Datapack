@@ -97,7 +97,7 @@ execute as @a[team=,scores={click=1..},nbt={SelectedItem:{id:"minecraft:carrot_o
 execute as @a[team=,scores={click=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:3}}}] run function mcquest:get_clicked
 
 # click remove 1
-#scoreboard players remove @a[scores={click=1..}] click 1
+scoreboard players remove @a[scores={click=1..}] click 1
 
 # Only mods are operator
 function mcquest:set_op
