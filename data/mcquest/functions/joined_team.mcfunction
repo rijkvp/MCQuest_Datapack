@@ -9,6 +9,6 @@ execute if score @s select matches 4 store result score #bool select run team jo
 execute if score @s select matches 3 store result score #bool select run team join rood @s
 
 # Clear the special tag items
-clear @s red_concrete{mcquest:1b}
-clear @s blue_concrete{mcquest:1b}
-clear @s light_gray_concrete{mcquest:1b}
+clear @s carrot_on_a_stick{mcquest:1b}
+clear @s carrot_on_a_stick{mcquest:1b}
+clear @s carrot_on_a_stick{mcquest:1b}
