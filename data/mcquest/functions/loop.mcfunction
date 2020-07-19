@@ -54,7 +54,7 @@ execute at @e[scores={timer=66000}] run playsound minecraft:block.note_block.bit
 execute at @e[scores={timer=70800}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 1","bold":true,"color":"#F28003"},{"text":" minuut!","color":"yellow"}]
 execute at @e[scores={timer=70800}] run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 0.0 1.0
 execute at @e[scores={timer=71900}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 5","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
-execute at @e[scores={timer=71900}] run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 2.0 1.0
+execute at @e[scores={timer=71900}] run playsound minecraft:block.note_blo`ck.bit master @a ~ ~ ~ 1 2.0 1.0
 execute at @e[scores={timer=71920}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 4","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
 execute at @e[scores={timer=71920}] run playsound minecraft:block.note_block.bit master @a ~ ~ ~ 1 1.5 1.0
 execute at @e[scores={timer=71940}] run tellraw @a ["",{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":"MC","bold":true,"color":"green"},{"text":"Q","bold":true,"color":"red"},{"text":"|","bold":true,"obfuscated":true,"color":"light_purple"},{"text":" Nog","color":"yellow"},{"text":" 3","bold":true,"color":"#F28003"},{"text":" seconden!","color":"yellow"}]
@@ -70,9 +70,9 @@ execute as @a[scores={drop=1..}] run function mcquest:get_slot
 kill @e[nbt={Item:{tag:{mcquest:1b}}}]
 
 # Set the blocks in youre inventory
-replaceitem entity @a[team=] hotbar.3 minecraft:carrot_on_a_stick{mcquest:1b,display:{Name:"{\"text\":\"Rood\",\"color\":\"red\",\"bold\":\"true\"}"},}
-replaceitem entity @a[team=] hotbar.5 minecraft:carrot_on_a_stick{mcquest:1b,display:{Name:"{\"text\":\"Blauw\",\"color\":\"blue\",\"bold\":\"true\"}"},}
-replaceitem entity @a[team=] hotbar.4 minecraft:carrot_on_a_stick{mcquest:1b,display:{Name:"{\"text\":\"Spectator\",\"color\":\"gray\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.3 minecraft:carrot_on_a_stick{mcquest:1b,CustomModelData:1,display:{Name:"{\"text\":\"Rood\",\"color\":\"red\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.5 minecraft:carrot_on_a_stick{mcquest:1b,CustomModelData:3,display:{Name:"{\"text\":\"Blauw\",\"color\":\"blue\",\"bold\":\"true\"}"},}
+replaceitem entity @a[team=] hotbar.4 minecraft:carrot_on_a_stick{mcquest:1b,CustomModelData:2,display:{Name:"{\"text\":\"Spectator\",\"color\":\"gray\",\"bold\":\"true\"}"},}
 
 # Trigger commands
 scoreboard players enable @a credits
