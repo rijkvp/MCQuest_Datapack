@@ -13,6 +13,8 @@ scoreboard objectives add message trigger
 scoreboard players set @a message 1
 scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay belowName health
+scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
+
 # scoreboard objectives add leave trigger
 scoreboard objectives add deaths deathCount
 scoreboard players set @a deaths 0
