@@ -90,5 +90,13 @@ execute as @a[scores={message=5}] run function mcquest:credits/richel
 execute as @a[scores={message=7..}] run function mcquest:credits/error
 execute as @a[scores={credits=2..}] run function mcquest:credits/error
 
+#clicked on team
+execute as @a[team=,scores={click=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:2}}}] run team join rood
+execute as @a[team=,scores={click=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] run team join blauw
+execute as @a[team=,scores={click=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:3}}}] run team join spec
+
+# click remove 1
+scoreboard players remove @a[scores={click=1..}] click 1
+
 # Only mods are operator
 function mcquest:set_op
