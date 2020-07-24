@@ -16,7 +16,8 @@ effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
 # Execute commands if you are dead
-execute if score #data_holder respawn_disabled matches 1 run execute if score #data_holder timer matches 0..72000 run execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
+execute if score #data_holder respawn_disabled matches 1 run execute as @a[scores={deaths=1..}, team=!mod] run function mcquest:death_handler
+execute if score #data_holder respawn_disabled matches 1 run execute as @a[team=!mod,scores={deaths=0}] run spawnpoint @s
 
 # Give you regeneration and night vision if you are not in a team yet
 effect give @a[team=] minecraft:regeneration 2 255 true
@@ -24,7 +25,7 @@ effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
-
+function mcquest:pets/loop
 
 # Bars
 bossbar set minecraft:0 players @a
@@ -94,6 +95,10 @@ execute as @a[scores={credits=2..}] run function mcquest:credits/error
 #clicked on team
 execute as @a[team=,scores={click=1..}] run function mcquest:get_clicked
 
+#remove when in hand
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] run clear @s carrot_on_a_stick{mcquest:1b} 1
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:2}}}] run clear @s carrot_on_a_stick{mcquest:1b} 1
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:3}}}] run clear @s carrot_on_a_stick{mcquest:1b} 1
 
 # click remove 1
 scoreboard players remove @a[scores={click=1..}] click 1

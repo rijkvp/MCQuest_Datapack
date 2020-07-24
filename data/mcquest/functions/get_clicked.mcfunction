@@ -25,7 +25,7 @@ execute if score @s cselect matches 3 store result score #bool cselect run team 
 execute if score @s cselect matches 5 store result score #bool cselect run clear @s carrot_on_a_stick{mcquest:1b}
 execute if score @s cselect matches 4 store result score #bool cselect run clear @s carrot_on_a_stick{mcquest:1b}
 execute if score @s cselect matches 3 store result score #bool cselect run clear @s carrot_on_a_stick{mcquest:1b}
-execute as @a[scores={click=1..},team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] run clear @s carrot_on_a_stick{mcquest:1b}
-execute as @a[scores={click=1..},team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:2}}}] run clear @s carrot_on_a_stick{mcquest:1b}
-execute as @a[scores={click=1..},team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:3}}}] run clear @s carrot_on_a_stick{mcquest:1b}
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:1}}}] run clear @s carrot_on_a_stick{mcquest:1b}
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:2}}}] run clear @s carrot_on_a_stick{mcquest:1b}
+execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:3}}}] run clear @s carrot_on_a_stick{mcquest:1b}
 scoreboard players reset @s cselect

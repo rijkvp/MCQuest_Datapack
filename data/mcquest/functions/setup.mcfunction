@@ -1,5 +1,15 @@
 #remove scoreboards
 scoreboard objectives remove click
+scoreboard objectives remove tick-timer 
+scoreboard objectives remove min-timer
+scoreboard objectives remove drop
+scoreboard objectives remove select 
+scoreboard objectives remove cselect 
+scoreboard objectives remove health 
+scoreboard objectives remove credits 
+scoreboard objectives remove message 
+scoreboard objectives remove health
+scoreboard objectives remove deaths
 
 # Create scoreboards
 scoreboard objectives add tick-timer dummy
