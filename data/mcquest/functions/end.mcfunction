@@ -8,8 +8,6 @@ bossbar set minecraft:2 visible true
 scoreboard players set @e timer -100000
 bossbar set minecraft:1 value 0
 scoreboard objectives remove timer
-kill @e[type=minecraft:armor_stand]
-tag @e remove data_holder
 # Set gamemode to spectator for everyone
 team join spec @a[team=!mod]
 defaultgamemode spectator

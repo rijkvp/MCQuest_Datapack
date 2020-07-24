@@ -30,14 +30,12 @@ tag @e remove data_holder
 scoreboard players set @a deaths 0 
 
 # Setup Timer
-summon armor_stand ~ 255 ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b}
-tag @e[type=minecraft:armor_stand, limit=1, tag=] add data_holder
 scoreboard objectives add timer dummy "game-timer"
-scoreboard players set @e[tag=data_holder,limit=1] timer 0
+scoreboard players set #data_holder timer 0
 bossbar set minecraft:1 max 72000
 
 scoreboard objectives add respawn_disabled dummy
-scoreboard players set @e[tag=data_holder,limit=1] respawn_disabled 0
+scoreboard players set #data_holder respawn_disabled 0
 
 # Reset time & weather
 time set 0

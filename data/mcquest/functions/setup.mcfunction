@@ -7,6 +7,7 @@ scoreboard objectives add min-timer dummy
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
+scoreboard objectives add cselect dummy
 scoreboard objectives add health health
 scoreboard objectives add credits trigger
 scoreboard objectives add message trigger
@@ -66,8 +67,6 @@ team modify mod seeFriendlyInvisibles true
 bossbar set minecraft:1 value 0
 bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
-kill @e[type=minecraft:armor_stand]
-tag @e remove data_holder
 
 # Setup the bossbars
 bossbar add 0 "MCQ - Pre-Game"
