@@ -29,13 +29,13 @@ execute unless score #data_holder timer matches ..120 if score #countdown timer 
 execute unless score #data_holder timer matches ..120 if score #countdown timer matches 60..80 run replaceitem entity @a weapon.offhand minecraft:paper{CustomModelData:1}
 
 #Clear Items
-execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81 run clear @a paper
-execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81 run kill @e[type=item]
+execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81.. run clear @a paper{CustomModelData:3}
+execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81.. run clear @a paper{CustomModelData:2}
+execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81.. run clear @a paper{CustomModelData:1}
+execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81.. run kill @e[type=item,nbt={Item: {tag:{CustomModelData:1}}}]
+execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81.. run kill @e[type=item,nbt={Item: {tag:{CustomModelData:2}}}]
+execute unless score #data_holder timer matches ..120 if score #countdown timer matches 81.. run kill @e[type=item,nbt={Item: {tag:{CustomModelData:3}}}]
 
 #start
 execute unless score #data_holder timer matches ..120 if score #countdown timer matches 80 run title @a subtitle {"text":"STOP!","color":"yellow"}
 execute unless score #data_holder timer matches ..120 if score #countdown timer matches 80 run title @a title ["",{"text":"STOP ","bold":true,"color":"green"},{"text":"STOP","bold":true,"color":"red"}]
-
-#always remove the items
-execute if score #data_holder timer matches 120.. run clear @a paper
-execute if score #data_holder timer matches 120.. run kill @e[type=item]
