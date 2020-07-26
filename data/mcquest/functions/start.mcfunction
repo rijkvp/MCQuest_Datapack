@@ -38,7 +38,7 @@ scoreboard objectives add respawn_disabled dummy
 scoreboard players set #data_holder respawn_disabled 0
 
 # Reset time & weather
-time set 0
+time set midnight
 weather clear 12000
 
 #title @a subtitle {"text":"Is begonnen!","color":"yellow"}

@@ -13,6 +13,7 @@ execute if score #data_holder timer matches ..80 run execute at @a[team=rood] as
 execute if score #data_holder timer matches 20..40 run replaceitem entity @a weapon.offhand minecraft:paper{CustomModelData:3}
 execute if score #data_holder timer matches 40..60 run replaceitem entity @a weapon.offhand minecraft:paper{CustomModelData:2}
 execute if score #data_holder timer matches 60..80 run replaceitem entity @a weapon.offhand minecraft:paper{CustomModelData:1}
+execute if score #data_holder timer matches 81 run time set 0
 
 #Clear Items
 execute if score #data_holder timer matches 81 run clear @a paper
