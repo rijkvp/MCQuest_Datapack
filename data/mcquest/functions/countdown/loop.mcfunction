@@ -35,3 +35,7 @@ execute unless score #data_holder timer matches ..120 if score #countdown timer 
 #start
 execute unless score #data_holder timer matches ..120 if score #countdown timer matches 80 run title @a subtitle {"text":"STOP!","color":"yellow"}
 execute unless score #data_holder timer matches ..120 if score #countdown timer matches 80 run title @a title ["",{"text":"STOP ","bold":true,"color":"green"},{"text":"STOP","bold":true,"color":"red"}]
+
+#always remove the items
+execute if score #data_holder timer matches 120.. run clear @a paper
+execute if score #data_holder timer matches 120.. run kill @e[type=item]
