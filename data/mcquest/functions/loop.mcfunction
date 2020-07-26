@@ -103,5 +103,9 @@ execute as @a[team=!,nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Cu
 # click remove 1
 scoreboard players remove @a[scores={click=1..}] click 1
 
+#Countdown starter before start
+function mcquest:countdown/loop
+scoreboard players add #countdown timer 1
+
 # Only mods are operator
 function mcquest:set_op

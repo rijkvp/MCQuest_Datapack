@@ -41,8 +41,8 @@ scoreboard players set #data_holder respawn_disabled 0
 time set 0
 weather clear 12000
 
-title @a subtitle {"text":"Is begonnen!","color":"yellow"}
-title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
+#title @a subtitle {"text":"Is begonnen!","color":"yellow"}
+#title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
 schedule function mcquest:playsound 1t
 scoreboard players set @a credits 1
 tellraw @a {"text":"Veel plezier","bold":true,"italic":true,"underlined":true,"color":"yellow","clickEvent":{"action":"suggest_command","value":"Veel plezier xD"},"hoverEvent":{"action":"show_text","value":["",{"text":"V","bold":true,"italic":true,"underlined":true,"color":"dark_blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_green"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"dark_aqua"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"dark_red"},{"text":" p","bold":true,"italic":true,"underlined":true,"color":"dark_purple"},{"text":"l","bold":true,"italic":true,"underlined":true,"color":"gold"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"gray"},{"text":"z","bold":true,"italic":true,"underlined":true,"color":"dark_gray"},{"text":"i","bold":true,"italic":true,"underlined":true,"color":"blue"},{"text":"e","bold":true,"italic":true,"underlined":true,"color":"green"},{"text":"r","bold":true,"italic":true,"underlined":true,"color":"aqua"}]}}
