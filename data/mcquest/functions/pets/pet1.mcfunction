@@ -1,0 +1,3 @@
+kill @e[type=armor_stand,tag=altijdyourigames]
+execute anchored eyes run execute at @a[name=AltijdYourigames] run summon armor_stand ^-1 ^-1 ^0.4 {Small:1b,NoBasePlate:1b,ShowArms:1b,Marker:0b,HandItems:[{},{}],Pose:{Head:[51f,0f,0f]},Health:2000000f,Tags:["altijdyourigames"],Invulnerable:1b,HurtTime:0s,Marker:1b}
+execute as @a[name=AltijdYourigames] run replaceitem entity @s armor.head minecraft:player_head{SkullOwner:AltijdYourigames}

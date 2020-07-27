@@ -1,13 +1,31 @@
+#remove scoreboards
+scoreboard objectives remove click
+scoreboard objectives remove tick-timer 
+scoreboard objectives remove min-timer
+scoreboard objectives remove drop
+scoreboard objectives remove select 
+scoreboard objectives remove cselect 
+scoreboard objectives remove health 
+scoreboard objectives remove credits 
+scoreboard objectives remove message 
+scoreboard objectives remove health
+scoreboard objectives remove deaths
+
 # Create scoreboards
+scoreboard objectives add tick-timer dummy
+scoreboard objectives add min-timer dummy
 scoreboard objectives remove drop
 scoreboard objectives add drop minecraft.custom:minecraft.drop
 scoreboard objectives add select dummy
+scoreboard objectives add cselect dummy
 scoreboard objectives add health health
 scoreboard objectives add credits trigger
 scoreboard objectives add message trigger
 scoreboard players set @a message 1
 scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay belowName health
+scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
+
 # scoreboard objectives add leave trigger
 scoreboard objectives add deaths deathCount
 scoreboard players set @a deaths 0
@@ -21,6 +39,11 @@ gamerule doDaylightCycle false
 gamerule doMobSpawning false
 defaultgamemode adventure
 difficulty easy
+
+#auto clear
+scoreboard objectives add tick_timer dummy
+scoreboard objectives add min_timer dummy
+function mcquest:autoclear
 
 # Create the teams
 team add blauw "Blauw"
@@ -54,8 +77,6 @@ team modify mod seeFriendlyInvisibles true
 bossbar set minecraft:1 value 0
 bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
-kill @e[type=minecraft:armor_stand]
-tag @e remove data_holder
 
 # Setup the bossbars
 bossbar add 0 "MCQ - Pre-Game"
