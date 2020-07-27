@@ -37,9 +37,11 @@ bossbar set minecraft:1 max 72000
 scoreboard objectives add respawn_disabled dummy
 scoreboard players set #data_holder respawn_disabled 0
 
-# Reset time & weather
-time set midnight
+# Reset weather
 weather clear 12000
+
+# Set time to midnight for countdown effect
+time set midnight
 
 #title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 #title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
