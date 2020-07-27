@@ -25,8 +25,6 @@ effect give @a[team=] minecraft:resistance 2 255 true
 effect give @a[gamemode=adventure] minecraft:weakness 2 255 true
 effect give @a[gamemode=adventure] minecraft:saturation 2 255 true
 
-function mcquest:pets/loop
-
 # Bars
 bossbar set minecraft:0 players @a
 bossbar set minecraft:1 players @a
