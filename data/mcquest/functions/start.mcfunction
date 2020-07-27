@@ -27,7 +27,7 @@ bossbar set minecraft:1 style notched_20
 scoreboard objectives remove timer
 kill @e[type=minecraft:armor_stand]
 tag @e remove data_holder
-scoreboard players set @a deaths 0 
+scoreboard players set @a deaths 0
 
 # Setup Timer
 scoreboard objectives add timer dummy "game-timer"
@@ -37,9 +37,11 @@ bossbar set minecraft:1 max 72000
 scoreboard objectives add respawn_disabled dummy
 scoreboard players set #data_holder respawn_disabled 0
 
-# Reset time & weather
-time set midnight
+# Reset weather
 weather clear 12000
+
+# Set time to midnight for countdown effect
+time set midnight
 
 #title @a subtitle {"text":"Is begonnen!","color":"yellow"}
 #title @a title ["",{"text":"Minecraft ","bold":true,"color":"green"},{"text":"Quest","bold":true,"color":"red"}]
