@@ -7,8 +7,6 @@ gamemode spectator @a[team=spec]
 
 # Night vision & invis for mods
 effect give @a[team=mod] minecraft:night_vision 16 255 true
-effect give @a[team=mod] minecraft:invisibility 2 255 true
-
 # No pvp/damage if in adventure
 effect give @a[gamemode=adventure] minecraft:regeneration 2 255 true
 effect give @a[gamemode=adventure] minecraft:resistance 2 255 true
